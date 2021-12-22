@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+li {
+  border-bottom: 1px ridge rgba(119, 122, 146, 0.3);
+  padding: 20px;
+}
+
+.App {
+  height: 100vh;
+  width: 100%;
+  background-color: #161722;
+}
+
+.App.whiteMode {
+  background-color: #fafafa;
+}
+
+.bg {
+  background: url(./images/bg-desktop-dark.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+
+.bg.whiteMode {
+  background: url(./images/bg-desktop-light.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 850px;
+  margin: 0 auto 50px auto;
+  padding-top: 100px;
+  color: white;
+  font-size: 30px;
+}
+
+.modeBtn {
+  background: url(./images/icon-sun.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+
+.modeBtn.whiteMode {
+  background: url(./images/icon-moon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 850px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto 30px auto;
+}
+
+.inputSave {
+  outline: none;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background-color: #25273c;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  padding-left: 30px;
+  width: 820px;
+  position: relative;
+  color: #cacde8;
+  font-size: 20px;
+}
+
+.inputSave.whiteMode {
+  color: black;
+  background-color: #e4e5f1;
+}
+
+.btnSave {
+  position: absolute;
+  height: 60px;
+  width: 50px;
+  background-color: #25273c;
+  border: none;
+  border-radius: 10px;
+  right: 536px;
+  border: 1px solid #161722;
+}
+
+.btnSave.whiteMode {
+  background-color: #e4e5f1;
+  border: 1px solid #fafafa;
+}
+
+.btnSave.whiteMode:hover {
+  color: black;
+}
+
+.container {
+  width: 850px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto 0 auto;
+  background-color: #25273c;
+  border-radius: 10px 10px 0 0;
+}
+
+.container.whiteMode {
+  background-color: #e4e5f1;
+}
+
+.item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.remove {
+  background: url(./images/icon-cross.svg);
+  background-color: #25273c;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  border: none;
+  padding: 10px;
+}
+
+.remove.whiteMode {
+  background-color: #e4e5f1;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 850px;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #25273c;
+  height: 61px;
+  color: #4d5066;
+  border-radius: 0 0 10px 10px;
+  margin-top: -5px;
+}
+
+.footer.whiteMode {
+  background: #e4e5f1;
+  color: #9394a5;
+}
+
+.footer p {
+  margin-left: 20px;
+}
+
+.footer button {
+  background: #25273c;
+  border: none;
+  color: #4d5066;
+  margin-right: 20px;
+}
+
+.footer button.whiteMode {
+  background: white;
+  color: #9394a5;
+}
+
+button:hover {
+  color: #e4e5f1;
+}
+
+button:hover.whiteMode {
+  color: #484b6a;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+.tasks {
+  padding-left: 70px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 18px;
+  text-transform: capitalize;
+  color: #cacde8;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.tasks.whiteMode {
+  color: #484b6a;
+}
+
+label::before {
+  content: '';
+  background: url("./images/icon-check.svg");
+  background-position-y: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 12px;
+  -webkit-transform: scale(0) rotateZ(180deg);
+          transform: scale(0) rotateZ(180deg);
+  -webkit-transition: all 0.4s cubic-bezier(0.54, 0.01, 0, 1.49);
+  transition: all 0.4s cubic-bezier(0.54, 0.01, 0, 1.49);
+  z-index: 2;
+}
+
+input[type="checkbox"]:checked + label::before {
+  -webkit-transform: scale(1) rotateZ(0deg);
+          transform: scale(1) rotateZ(0deg);
+}
+
+.tasks::after {
+  content: '';
+  border: 1px solid rgba(119, 122, 146, 0.3);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  position: absolute;
+  left: 5px;
+}
+
+input[type="checkbox"]:checked + label::after {
+  background: linear-gradient(120deg, #57ddff, #c058f3);
+  border: none;
+}
+
+input[type="checkbox"]:checked + .tasks {
+  color: rgba(77, 80, 102, 0.5);
+  text-decoration: line-through;
+}
+
+input[type="checkbox"]:checked + .tasks.whiteMode {
+  color: rgba(147, 148, 165, 0.5);
+  text-decoration: line-through;
+}
+
+button.active {
+  color: #3a7bfd;
+}
+
+button.active.whiteMode {
+  color: #3a7bfd;
+}
+/*# sourceMappingURL=App.css.map */
