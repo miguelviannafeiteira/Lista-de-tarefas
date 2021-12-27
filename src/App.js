@@ -15,7 +15,7 @@ function App() {
 
   const todo = useForm('todo');
 
-  // Save todo
+  // Save task in localStorage
 
   function saveTodo() {
     if (todo.value) {
@@ -39,9 +39,7 @@ function App() {
     document.location.reload();
   }
 
-  //------------------------------------------------
-
-  //  Drag and Drop
+  //  Drag and Drop and save de new location of the item
 
   function handleOnDragEnd(result) {
     if (!result.destination) return;
@@ -52,9 +50,8 @@ function App() {
     localStorage.setItem('data', JSON.stringify(items));
   }
 
-  //------------------------------------------------
-
-  // Buttons on the fotter
+  //  Buttons on the fotter that filters the list
+  //  of items that is shows
 
   function showAll() {
     const todosAll = JSON.parse(localStorage.getItem('data'));
@@ -77,6 +74,8 @@ function App() {
     setTodos(todosCompleted);
   }
 
+  //  Remove only the items that has complete ===  true
+
   function clearCompleted() {
     const reset = JSON.parse(localStorage.getItem('data'));
     const todosCompletedToRemove = reset.filter((item) => {
@@ -86,7 +85,7 @@ function App() {
     document.location.reload();
   }
 
-  //-----------------------------------------------
+  //  Change between dark and light mode
 
   function changeMode() {
     if (mode === false) {
@@ -95,6 +94,8 @@ function App() {
       setMode(false);
     }
   }
+
+  //  Remove the item select
 
   function remove({ target }) {
     const reset = JSON.parse(localStorage.getItem('data'));
@@ -107,9 +108,9 @@ function App() {
     document.location.reload();
   }
 
-  //--------------------------------------------------------------------
-
   function handleChange({ target }) {
+    //  To have multiples checkbox
+
     if (target.checked) {
       setValues([...values, target.value]);
     } else {
@@ -119,6 +120,8 @@ function App() {
         }),
       );
     }
+
+    //  Set false or true to de propertry complete
 
     const reset = JSON.parse(localStorage.getItem('data'));
     const changed = reset.map((item) => {
@@ -147,6 +150,8 @@ function App() {
 
     localStorage.setItem('data', JSON.stringify(changed));
   }
+
+  //  To add class selected
 
   function itemSelected(e) {
     setSelected(e);
