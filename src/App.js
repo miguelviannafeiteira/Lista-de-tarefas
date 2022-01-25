@@ -188,11 +188,10 @@ function App() {
         >
           <Input
             className={cn('inputSave', { whiteMode: mode })}
-            name="Currently typing"
+            name="Create a new Todo..."
             type="text"
             {...todo}
           />
-          <button className={cn('btnSave', { whiteMode: mode })}>Salvar</button>
         </form>
         <section className={cn('container', { whiteMode: mode })}>
           <DragDropContext onDragEnd={handleOnDragEnd} className="dragContext">

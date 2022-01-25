@@ -3,6 +3,7 @@
   padding: 0;
   list-style-type: none;
   text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 button {
@@ -50,7 +51,8 @@ header {
   margin: 0 auto 50px auto;
   padding-top: 100px;
   color: white;
-  font-size: 30px;
+  font-size: 28px;
+  letter-spacing: 20px;
 }
 
 .modeBtn {
@@ -104,25 +106,6 @@ header {
   background-color: #e4e5f1;
 }
 
-.btnSave {
-  position: absolute;
-  height: 60px;
-  width: 50px;
-  background-color: #25273c;
-  border: none;
-  border-radius: 10px;
-  right: 536px;
-  border: 1px solid #161722;
-}
-
-.btnSave.whiteMode {
-  background-color: #e4e5f1;
-  border: 1px solid #fafafa;
-}
-
-.btnSave.whiteMode:hover {
-  color: black;
-}
 
 .container {
   width: 850px;
@@ -200,10 +183,12 @@ header {
   border: none;
   color: #4d5066;
   margin-right: 20px;
+  font-size: 16px;
 }
 
 .footer button.whiteMode {
-  background: white;
+  
+  background: #e4e5f1;
   color: #9394a5;
 }
 
@@ -249,7 +234,7 @@ label::before {
   position: absolute;
   left: 12px;
   -webkit-transform: scale(0) rotateZ(180deg);
-          transform: scale(0) rotateZ(180deg);
+  transform: scale(0) rotateZ(180deg);
   -webkit-transition: all 0.4s cubic-bezier(0.54, 0.01, 0, 1.49);
   transition: all 0.4s cubic-bezier(0.54, 0.01, 0, 1.49);
   z-index: 2;
@@ -257,7 +242,7 @@ label::before {
 
 input[type="checkbox"]:checked + label::before {
   -webkit-transform: scale(1) rotateZ(0deg);
-          transform: scale(1) rotateZ(0deg);
+  transform: scale(1) rotateZ(0deg);
 }
 
 .tasks::after {
