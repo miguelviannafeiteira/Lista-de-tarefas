@@ -188,12 +188,12 @@ function App() {
         >
           <Input
             className={cn('inputSave', { whiteMode: mode })}
-            name="Create a new Todo..."
+            name="    Create a new Todo..."
             type="text"
             {...todo}
           />
         </form>
-        <section className={cn('container', { whiteMode: mode })}>
+        <div className={cn('container', { whiteMode: mode })}>
           <DragDropContext onDragEnd={handleOnDragEnd} className="dragContext">
             <Droppable droppableId="todos">
               {(provided) => (
@@ -246,7 +246,8 @@ function App() {
               )}
             </Droppable>
           </DragDropContext>
-        </section>
+        </div>
+        <div className={cn('mobile', { whiteMode: mode })}></div>
         <footer className={cn('footer', { whiteMode: mode })}>
           <p>{todos && todos.length} items left</p>
           <div>
@@ -278,7 +279,10 @@ function App() {
               Completed
             </button>
           </div>
-          <button className={cn({ whiteMode: mode })} onClick={clearCompleted}>
+          <button
+            className={cn('clear', { whiteMode: mode })}
+            onClick={clearCompleted}
+          >
             {' '}
             Clear Completed
           </button>
