@@ -1,10 +1,10 @@
 Tecnologias utilizadas
-React.js
-JavaScript
-SASS como pré-processador de CSS
-HTML
-clsx lib
-beautiful drag and drop lib
+ -  React.js
+  - JavaScript
+  - SASS como pré-processador de CSS
+  - HTML
+  - clsx lib
+  - beautiful drag and drop lib
 
 Nesse projeto criei uma aplicação web que serve como uma lista de tarefas.
 A lista de tarefas tem dois temas, o dark e o light, no qual utilizei o hook useState e a lib
